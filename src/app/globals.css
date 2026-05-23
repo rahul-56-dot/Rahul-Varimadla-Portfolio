@@ -84,6 +84,10 @@
     box-shadow: 0 8px 32px rgba(15, 23, 42, 0.12);
   }
 
+  body.light-theme .site-footer {
+    border-color: rgba(15, 23, 42, 0.08);
+  }
+
   /* Remap white-tinted utilities for readable light mode */
   body.light-theme .text-white\/90 { color: #0f172a; }
   body.light-theme .text-white\/80 { color: #1e293b; }
