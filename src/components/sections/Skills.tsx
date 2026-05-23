@@ -60,7 +60,7 @@ function SkillSphere({ category, index }: { category: typeof skillCategories[0];
               {category.name[0]}
             </span>
           </motion.div>
-          <h3 className="font-display text-xl font-bold text-white/90">{category.name}</h3>
+          <h3 className="font-display text-xl font-bold text-text-primary">{category.name}</h3>
         </div>
         <div className="space-y-4">
           {category.skills.map((skill) => (

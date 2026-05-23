@@ -90,7 +90,7 @@ export function About() {
             {floatingTechIcons.map((icon, i) => (
               <motion.span
                 key={icon}
-                className="absolute font-mono text-xs text-neon-cyan/40 glass-panel px-2 py-1 rounded-lg border border-neon-cyan/10"
+                className="absolute font-mono text-xs text-neon-cyan/70 glass-panel px-2 py-1 rounded-lg border border-neon-cyan/20"
                 style={{
                   top: `${10 + (i % 4) * 20}%`,
                   left: i % 2 === 0 ? "-10%" : "auto",
@@ -129,7 +129,7 @@ export function About() {
             </div>
 
             <div>
-              <h3 className="font-display text-xl mb-4 text-white/90">Technologies</h3>
+              <h3 className="font-display text-xl mb-4 text-text-primary">Technologies</h3>
               <motion.div className="flex flex-wrap gap-2">
                 {aboutContent.technologies.map((tech, i) => (
                   <motion.span
@@ -147,7 +147,7 @@ export function About() {
             </div>
 
             <div>
-              <h3 className="font-display text-xl mb-4 text-white/90">Future Goals</h3>
+              <h3 className="font-display text-xl mb-4 text-text-primary">Future Goals</h3>
               <ul className="space-y-3">
                 {aboutContent.goals.map((goal, i) => (
                   <motion.li
@@ -165,7 +165,7 @@ export function About() {
             </div>
 
             <div className="space-y-4">
-              <h3 className="font-display text-xl text-white/90">Education</h3>
+              <h3 className="font-display text-xl text-text-primary">Education</h3>
               {education.map((edu, i) => (
                 <motion.div
                   key={edu.title}
@@ -175,7 +175,7 @@ export function About() {
                   transition={{ delay: 1 + i * 0.15 }}
                 >
                   <span className="text-neon-cyan/60 font-mono text-xs">{edu.year}</span>
-                  <h4 className="font-semibold text-white/90 mt-1">{edu.title}</h4>
+                  <h4 className="font-semibold text-text-primary mt-1">{edu.title}</h4>
                   <p className="text-neon-purple/80 text-sm">{edu.institution}</p>
                   <p className="text-text-muted text-sm mt-1">{edu.description}</p>
                 </motion.div>
