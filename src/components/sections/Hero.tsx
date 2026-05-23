@@ -157,7 +157,7 @@ export function Hero() {
         animate={{ opacity: 1 }}
         transition={{ delay: 4.5 }}
       >
-        <span className="text-xs text-white/30 font-mono tracking-widest uppercase">Scroll</span>
+        <span className="text-xs text-text-muted font-mono tracking-widest uppercase">Scroll</span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}

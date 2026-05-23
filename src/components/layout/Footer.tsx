@@ -14,10 +14,10 @@ export function Footer() {
           {personalInfo.fullName}
         </motion.p>
         <p className="text-white/30 text-sm font-mono">
-          © {new Date().getFullYear()} · Crafted with precision & passion
+          © {new Date().getFullYear()} · All rights reserved.
         </p>
         <p className="text-white/20 text-xs font-mono">
-          Next-Gen Portfolio v1.0
+        Thanks for visiting my portfolio.
         </p>
       </div>
     </footer>

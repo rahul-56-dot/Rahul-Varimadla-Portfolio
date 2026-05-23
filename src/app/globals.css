@@ -302,6 +302,56 @@
     border-color: rgba(15, 23, 42, 0.12);
     box-shadow: 0 8px 32px rgba(15, 23, 42, 0.06);
   }
+
+  body.light-theme .outline-btn {
+    border-color: rgba(15, 23, 42, 0.28);
+    background: rgba(255, 255, 255, 0.92);
+    color: #0f172a;
+    box-shadow: 0 2px 12px rgba(15, 23, 42, 0.08);
+  }
+
+  body.light-theme .outline-btn:hover {
+    border-color: rgba(8, 145, 178, 0.55);
+    color: #0891b2;
+    background: #ffffff;
+    box-shadow: 0 4px 16px rgba(8, 145, 178, 0.12);
+  }
+
+  /* Neon CTA: dark text on cyan reads better in light mode */
+  body.light-theme .bg-neon-cyan.text-void {
+    color: #0f172a;
+  }
+
+  .project-action-btn--live:hover {
+    border-color: rgba(0, 240, 255, 0.45);
+    color: #00f0ff;
+    background: rgba(0, 240, 255, 0.08);
+  }
+
+  .project-action-btn--code:hover {
+    border-color: rgba(168, 85, 247, 0.45);
+    color: #a855f7;
+    background: rgba(168, 85, 247, 0.08);
+  }
+
+  body.light-theme .project-action-btn {
+    border-color: rgba(15, 23, 42, 0.22);
+    background: #f8fafc;
+    color: #334155;
+    box-shadow: 0 1px 4px rgba(15, 23, 42, 0.06);
+  }
+
+  body.light-theme .project-action-btn--live:hover {
+    border-color: rgba(8, 145, 178, 0.55);
+    background: #ffffff;
+    color: #0891b2;
+  }
+
+  body.light-theme .project-action-btn--code:hover {
+    border-color: rgba(124, 58, 237, 0.45);
+    background: #ffffff;
+    color: #7c3aed;
+  }
 }
 
 @keyframes float {

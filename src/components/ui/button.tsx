@@ -10,10 +10,10 @@ const buttonVariants = cva(
       variant: {
         default:
           "bg-gradient-to-r from-neon-cyan/20 to-neon-purple/20 text-white border border-neon-cyan/30 hover:border-neon-cyan/60 hover:shadow-[0_0_30px_rgba(0,240,255,0.3)]",
-        ghost: "hover:bg-white/5 text-white/80 hover:text-white",
+        ghost: "text-text-secondary hover:bg-white/5 hover:text-text-primary",
         neon: "bg-neon-cyan text-void font-semibold hover:shadow-[0_0_40px_rgba(0,240,255,0.5)] hover:scale-105",
         outline:
-          "border border-white/20 bg-transparent hover:border-neon-cyan/50 hover:text-neon-cyan",
+          "outline-btn border border-white/20 bg-transparent text-text-primary hover:border-neon-cyan/50 hover:text-neon-cyan",
       },
       size: {
         default: "h-11 px-6 py-2",

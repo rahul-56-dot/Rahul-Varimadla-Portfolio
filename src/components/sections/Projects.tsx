@@ -141,12 +141,24 @@ export function Projects() {
                     ))}
                   </div>
                   <div className="flex gap-4">
-                    <Button variant="ghost" size="sm" asChild className="hover:bg-neon-cyan/10 hover:text-neon-cyan" onClick={(e) => e.stopPropagation()}>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      asChild
+                      className="project-action-btn project-action-btn--live"
+                      onClick={(e) => e.stopPropagation()}
+                    >
                       <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" data-cursor="link">
                         <ExternalLink size={14} /> Live
                       </a>
                     </Button>
-                    <Button variant="ghost" size="sm" asChild className="hover:bg-neon-purple/10 hover:text-neon-purple" onClick={(e) => e.stopPropagation()}>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      asChild
+                      className="project-action-btn project-action-btn--code"
+                      onClick={(e) => e.stopPropagation()}
+                    >
                       <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" data-cursor="link">
                         <Github size={14} /> Code
                       </a>
