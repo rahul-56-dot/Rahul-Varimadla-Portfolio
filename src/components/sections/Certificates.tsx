@@ -28,7 +28,7 @@ export function Certificates() {
         </motion.div>
 
         <div className="relative flex items-center justify-center gap-4">
-          <button onClick={prev} data-cursor="button" className="p-3 rounded-full glass-panel text-white/60 hover:text-neon-cyan transition-colors">
+          <button onClick={prev} data-cursor="button" className="slider-nav-btn" aria-label="Previous certificate">
             <ChevronLeft size={24} />
           </button>
 
@@ -64,7 +64,7 @@ export function Certificates() {
                       backfaceVisibility: "hidden",
                       borderColor: isActive ? `${cert.color}40` : undefined,
                       boxShadow: isActive ? `0 0 40px ${cert.color}20` : undefined,
-                      background: isActive ? undefined : "rgba(15, 15, 30, 0.8)", // More solid for background cards
+                      background: isActive ? undefined : "var(--color-card-stack)",
                     }}
                   >
                     <div>
@@ -75,12 +75,12 @@ export function Certificates() {
                     <div>
                       <div className="flex flex-wrap gap-1.5 mb-3">
                         {cert.skills.map((s) => (
-                          <span key={s} className="text-xs px-2 py-0.5 rounded bg-white/5 text-white/60">
+                          <span key={s} className="text-xs px-2 py-0.5 rounded bg-white/5 text-text-secondary">
                             {s}
                           </span>
                         ))}
                       </div>
-                      <p className="font-mono text-xs text-neon-cyan/60">{cert.date}</p>
+                      <p className="font-mono text-xs text-neon-cyan/80">{cert.date}</p>
                     </div>
                   </div>
 
@@ -126,7 +126,7 @@ export function Certificates() {
             })}
           </div>
 
-          <button onClick={next} data-cursor="button" className="p-3 rounded-full glass-panel text-white/60 hover:text-neon-cyan transition-colors">
+          <button onClick={next} data-cursor="button" className="slider-nav-btn" aria-label="Next certificate">
             <ChevronRight size={24} />
           </button>
         </div>
@@ -136,7 +136,8 @@ export function Certificates() {
             <button
               key={i}
               onClick={() => setActive(i)}
-              className={`w-2 h-2 rounded-full transition-all ${i === active ? "w-6 bg-neon-cyan" : "bg-white/20"}`}
+              className={cn("slider-dot", i === active && "slider-dot-active")}
+              aria-label={`Go to certificate ${i + 1}`}
               data-cursor="button"
             />
           ))}

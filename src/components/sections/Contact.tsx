@@ -97,7 +97,7 @@ export function Contact() {
             initial={{ opacity: 0, x: 40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.3 }}
-            className="lg:col-span-3 glass-panel rounded-3xl p-8 border border-white/10"
+            className="lg:col-span-3 glass-panel rounded-3xl p-8 border border-white/10 contact-form-panel"
           >
             {fields.map((field) => (
               <div key={field.id} className="relative mb-6">
@@ -106,7 +106,7 @@ export function Contact() {
                   className={cn(
                     "absolute left-4 transition-all duration-300 font-mono text-xs pointer-events-none",
                     focused === field.id || form[field.id as keyof typeof form]
-                      ? "-top-2.5 text-neon-cyan bg-surface px-1"
+                      ? "-top-2.5 text-neon-cyan form-label-float px-1"
                       : "top-4 text-text-muted"
                   )}
                 >
@@ -120,7 +120,7 @@ export function Contact() {
                     onChange={(e) => setForm({ ...form, [field.id]: e.target.value })}
                     onFocus={() => setFocused(field.id)}
                     onBlur={() => setFocused(null)}
-                    className="w-full bg-surface/30 border border-white/10 rounded-xl px-4 pt-6 pb-3 text-text-primary focus:outline-none focus:border-neon-cyan/50 transition-colors resize-none"
+                    className="form-input resize-none"
                   />
                 ) : (
                   <input
@@ -130,7 +130,7 @@ export function Contact() {
                     onChange={(e) => setForm({ ...form, [field.id]: e.target.value })}
                     onFocus={() => setFocused(field.id)}
                     onBlur={() => setFocused(null)}
-                    className="w-full bg-surface/30 border border-white/10 rounded-xl px-4 pt-6 pb-3 text-text-primary focus:outline-none focus:border-neon-cyan/50 transition-colors"
+                    className="form-input"
                   />
                 )}
                 {errors[field.id] && (

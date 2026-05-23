@@ -77,17 +77,19 @@ export function Projects() {
 
       <div className="relative group/slider px-6 max-w-7xl mx-auto">
         {/* Navigation Buttons */}
-        <button 
+        <button
           onClick={() => scroll("left")}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full glass-panel text-white/60 hover:text-neon-cyan transition-all opacity-0 group-hover/slider:opacity-100 hidden md:flex"
+          className="slider-nav-btn absolute left-0 top-1/2 -translate-y-1/2 z-20 hidden md:flex opacity-90 hover:opacity-100"
           data-cursor="button"
+          aria-label="Previous project"
         >
           <ChevronLeft size={24} />
         </button>
-        <button 
+        <button
           onClick={() => scroll("right")}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full glass-panel text-white/60 hover:text-neon-cyan transition-all opacity-0 group-hover/slider:opacity-100 hidden md:flex"
+          className="slider-nav-btn absolute right-0 top-1/2 -translate-y-1/2 z-20 hidden md:flex opacity-90 hover:opacity-100"
           data-cursor="button"
+          aria-label="Next project"
         >
           <ChevronRight size={24} />
         </button>
@@ -171,10 +173,8 @@ export function Projects() {
                   }
                 }
               }}
-              className={cn(
-                "w-2 h-2 rounded-full transition-all duration-300",
-                i === activeSlide ? "w-8 bg-neon-cyan shadow-[0_0_10px_rgba(0,240,255,0.5)]" : "bg-white/20 hover:bg-white/40"
-              )}
+              className={cn("slider-dot", i === activeSlide && "slider-dot-active")}
+              aria-label={`Go to project ${i + 1}`}
               data-cursor="button"
             />
           ))}

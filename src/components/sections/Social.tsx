@@ -25,7 +25,7 @@ export function Social() {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         className="max-w-4xl mx-auto text-center"
       >
-        <p className="font-mono text-white/30 text-sm mb-8 tracking-widest uppercase">Connect Across the Network</p>
+        <p className="font-mono text-text-muted text-sm mb-8 tracking-widest uppercase">Connect Across the Network</p>
         <div className="flex flex-wrap justify-center gap-4">
           {socialLinks.map((link, i) => (
             <motion.a
@@ -42,10 +42,10 @@ export function Social() {
                 y: -4,
                 boxShadow: "0 0 30px rgba(0,240,255,0.4)",
               }}
-              className="group relative w-14 h-14 rounded-2xl glass-panel border border-white/10 flex items-center justify-center text-white/60 hover:text-neon-cyan hover:border-neon-cyan/40 transition-colors"
+              className="social-link-btn group relative w-14 h-14 rounded-2xl glass-panel border flex items-center justify-center transition-colors"
             >
               {iconComponents[link.icon]}
-              <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs text-white/40 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+              <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs text-text-muted opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                 {link.name}
               </span>
               <motion.span
